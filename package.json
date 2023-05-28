@@ -1,7 +1,6 @@
 {
-  "name": "frontend",
+  "name": "dictionary",
   "version": "0.1.0",
-  "private": true,
   "main": "build/electron/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
