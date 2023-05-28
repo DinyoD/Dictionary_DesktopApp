@@ -1,7 +1,7 @@
 import { Repository } from "typeorm";
 
 import { Language } from "../entities/language.entity";
-import { appDataSource } from "../bootstrap";
+import { appDataSource } from "../../electron/main";
 import { CreateLanguage } from "../dto/createLanguage";
 
 const langRepository: Repository<Language> =

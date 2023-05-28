@@ -1,7 +1,7 @@
 import { Repository } from "typeorm";
 
 import { Word } from "../entities/word.entity";
-import { appDataSource } from "../bootstrap";
+import { appDataSource } from "../../electron/main";
 import { CreateWordModel } from "../dto/createWord";
 
 const wordRepository: Repository<Word> = appDataSource.getRepository("Word");
