@@ -2,9 +2,11 @@ import { FC } from "react";
 
 const App: FC = () => {
   return (
-    <div>
-      <p>Hello World!</p>
-    </div>
+    <form>
+      <label>Add language:</label>
+      <input type="text" />
+      <button>submit</button>
+    </form>
   );
 };
 

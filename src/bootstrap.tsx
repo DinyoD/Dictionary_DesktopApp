@@ -1,12 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+import { DataSource } from "typeorm";
+import { createRoot } from "react-dom/client";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import App from "./App";
+import dbOptions from "../db/ormconfig";
+
+export const appDataSource: DataSource = new DataSource(dbOptions);
+appDataSource
+  .initialize()
+  .then(() => {
+    console.log(`Data Source has been initialized`);
+  })
+  .catch((err) => {
+    console.error(`Data Source initialization error`, err);
+  });
+
+createRoot(document.getElementById("root") as HTMLElement).render(<App />);

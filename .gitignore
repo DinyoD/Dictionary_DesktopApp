@@ -126,3 +126,7 @@ dist
 # TernJS port file
 .tern-port
 project_structure.md
+
+
+# Ide
+.vscode
